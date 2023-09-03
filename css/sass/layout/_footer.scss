@@ -1,0 +1,156 @@
+@use "../abstract" as *;
+@use "../base" as *;
+@use "../components" as *;
+footer {
+	background-color: $VeryDarkBlue;
+
+	.container {
+		position: relative;
+		margin: auto;
+		max-width: 1440px;
+		padding: 4rem 9rem 3rem;
+		color: #ffffff;
+		font-size: 15px !important;
+		display: grid;
+		grid-template-columns: 0.5fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		div {
+			display: flex;
+			&:first-of-type {
+				flex-direction: column;
+				justify-content: space-between;
+				ul {
+					display: flex;
+					gap: 8px;
+				}
+			}
+			&.About_list {
+				justify-content: space-between;
+				li {
+					padding: 8px;
+				}
+			}
+			&.form_container {
+				justify-content: flex-end;
+				form {
+					margin-top: 8px;
+					position: relative;
+					input {
+						width: 200px;
+						height: 44px;
+						border-radius: 55px;
+						padding: 14px;
+					}
+					button {
+						width: 65px;
+					}
+					span {
+						position: absolute;
+						top: 55px;
+						left: 11px;
+						font-size: 10px;
+						color: $orangeColor;
+						display: none;
+					}
+				}
+			}
+			li {
+				cursor: pointer;
+				&:hover {
+					color: $orangeColor;
+				}
+			}
+		}
+		.Copyright {
+			color: $DarkGrayishBlue;
+			position: absolute;
+			right: 113px;
+			bottom: 50px;
+			font-size: 13px;
+		}
+		.attribution {
+			position: absolute;
+			bottom: 12px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			a {
+				font-size: 10px;
+				color: white;
+				text-decoration: none;
+				padding: 0 5px;
+				&:hover {
+					color: $orangeColor;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoints("Large") {
+	footer {
+		.container {
+			padding: 2rem 3rem !important;
+		}
+	}
+}
+
+@include breakpoints("med") {
+	footer {
+		.container {
+			padding: 2rem 1rem !important;
+			.Copyright {
+				right: 40px;
+			}
+		}
+	}
+}
+
+@include breakpoints("mobile") {
+	footer {
+		.container {
+			max-width: 600px;
+			padding: 4rem 1.5rem 5rem;
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 40px;
+			div {
+				&:first-of-type {
+					gap: 40px;
+					align-items: center;
+					flex-direction: column-reverse;
+					ul {
+						width: 280px;
+						justify-content: space-between;
+						li {
+							transform: scale(1.5);
+						}
+					}
+				}
+				&.About_list {
+					justify-content: space-around;
+				}
+				&.form_container {
+					justify-content: center;
+					form {
+						input {
+							width: 240px;
+						}
+						button {
+							width: 80px;
+						}
+					}
+				}
+			}
+			.Copyright {
+				width: 244px;
+				left: 50%;
+				bottom: 30px;
+				transform: translate(-50%, 0px);
+			}
+			.attribution {
+				width: 288px;
+				bottom: 5px;
+			}
+		}
+	}
+}

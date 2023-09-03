@@ -1,0 +1,32 @@
+@use "../abstract/index" as var;
+
+.standerbutton {
+	background-color: var.$orangeColor;
+	border-radius: 20px;
+	width: 137px;
+	height: 44px;
+	outline: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: bold;
+
+	&:hover {
+		background-color: #f98f75;
+		color: #fcf6f5;
+	}
+	&.shadow {
+		box-shadow: 0px 8px 16px 2px #f3603c57;
+	}
+}
+.listRemoveStyle {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+%background {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

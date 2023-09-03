@@ -1,0 +1,98 @@
+@use "../abstract" as *;
+@use "../base" as *;
+.sliderSection {
+	.container {
+		padding: 4rem 0;
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+		h2 {
+			margin: auto;
+			font-weight: bold;
+			font-size: 40px;
+			color: $darkBlue;
+			width: fit-content;
+		}
+
+		.slidercontainer {
+			justify-content: space-evenly;
+			display: flex;
+			width: calc((540px * 4) + 150px);
+			padding: 7rem 0 4rem;
+			overflow: hidden;
+
+			div {
+				width: 540px;
+
+				padding: 3rem 2rem 1.5rem;
+				background-color: $VaryLightGray;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				position: relative;
+				color: $darkBlue;
+				transition: 0.5s ease-in-out;
+				p {
+					color: $DarkGrayishBlue;
+				}
+				img {
+					width: 72px;
+					height: 72px;
+					border-radius: 50%;
+					position: absolute;
+					top: -40px;
+					left: 50%;
+					transform: translate(-50%, 0);
+				}
+			}
+		}
+		.sliderbullet {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			bottom: 66px;
+			left: 50%;
+			transform: translate(-9px, 0);
+			display: none;
+			gap: 13px;
+			list-style: circle;
+			color: $orangeColor;
+			justify-content: center;
+			padding: 3px 4px;
+			li {
+				font-size: 21px;
+				&.slide-1 {
+					list-style: disc;
+				}
+			}
+		}
+		button {
+			margin: 0 50%;
+			transform: translate(-50%, 0px);
+		}
+	}
+}
+@include breakpoints("mobile") {
+	.sliderSection {
+		.container {
+			padding: 0;
+			h2 {
+				font-weight: bolder;
+				font-size: 30px;
+			}
+
+			.slidercontainer {
+				width: calc(340px * 4 + 150px);
+
+				div {
+					width: 340px;
+				}
+			}
+			.sliderbullet {
+				display: flex;
+			}
+		}
+	}
+}

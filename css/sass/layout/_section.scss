@@ -1,0 +1,151 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
+.aboutMangeSection {
+	width: 100%;
+	.container {
+		display: flex;
+		padding: 4rem 7rem 2rem;
+		width: 100%;
+		max-width: 1440px;
+		gap: 76px;
+		margin: auto;
+		& > div {
+			flex-basis: 50%;
+		}
+		& > div:first-of-type {
+			color: $darkBlue;
+
+			h2 {
+				font-size: 40px;
+				font-weight: bold;
+				width: 90%;
+			}
+			p {
+				color: #242d5283;
+				padding: 0 15rem 0 0;
+				line-height: 173%;
+			}
+		}
+		& > div:last-of-type {
+			color: $darkBlue;
+
+			h6 {
+				font-size: 16px;
+				font-weight: bold;
+				letter-spacing: -0.29px;
+				position: relative;
+				margin-bottom: 20px;
+				span {
+					position: absolute;
+					left: -87px;
+					background-color: #f3603c;
+					color: white;
+					text-align: center;
+					padding: 10px;
+					border-radius: 20px;
+					width: 67px;
+					top: -9px;
+				}
+			}
+			p {
+				color: #242d5283;
+				padding: 0px 8rem 0px 0px;
+				line-height: 173%;
+			}
+		}
+	}
+}
+
+@include breakpoints("Large") {
+	.aboutMangeSection {
+		.container {
+			padding: 4rem 3rem 2rem;
+			& > div {
+				&:first-of-type {
+					h2 {
+						width: 100%;
+					}
+					p {
+						padding: 0 5rem 0 0;
+					}
+				}
+			}
+			& > div:last-of-type {
+				p {
+					padding: 0 4rem 0 0;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoints("med") {
+	.aboutMangeSection {
+		.container {
+			padding: 4rem 0rem 1rem 1rem;
+
+			& > div {
+				&:first-of-type {
+					h2 {
+						width: 100%;
+					}
+					p {
+						padding: 0 5rem 0 0;
+					}
+				}
+			}
+			& > div:last-of-type {
+				p {
+					padding: 0 4rem 0 0;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoints("mobile") {
+	.aboutMangeSection {
+		.container {
+			padding: 4rem 1rem 2rem;
+			flex-direction: column;
+			& > div {
+				&:first-of-type {
+					h2 {
+						margin: auto;
+						font-size: 30px;
+						text-align: center;
+						width: 100%;
+					}
+					p {
+						padding: 0;
+						text-align: center;
+					}
+				}
+			}
+			& > div:last-of-type {
+				h6 {
+					width: 100%;
+					padding: 0 0 0 72px;
+					span {
+						left: -5px;
+					}
+					&::before {
+						content: "";
+						width: 100%;
+						position: absolute;
+						height: 38px;
+						background-color: $offWhite;
+						z-index: -1;
+						left: 17px;
+						top: -50%;
+					}
+				}
+				p {
+					padding: 0 0 2rem 0;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

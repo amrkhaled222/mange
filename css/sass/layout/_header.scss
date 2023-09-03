@@ -1,0 +1,97 @@
+@use "../abstract" as *;
+@use "../components" as *;
+header {
+	width: 100%;
+	.container {
+		padding: 4rem 7rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin: auto;
+		max-width: 1440px;
+		& > div {
+			flex-basis: 50%;
+			&:first-of-type {
+				h1 {
+					font-size: 56px;
+					font-weight: bold;
+					color: $darkBlue;
+					letter-spacing: -1px;
+					width: 83%;
+				}
+				p {
+					color: #242d529e;
+					font-weight: normal;
+					padding: 0px 214px 27px 0px;
+				}
+			}
+			&:last-of-type {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+@include breakpoints("Large") {
+	header {
+		.container {
+			padding: 2rem 3rem;
+			& > div {
+				&:first-of-type {
+					h1 {
+						width: 100%;
+					}
+					p {
+						padding: 0px 135px 27px 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include breakpoints("med") {
+	header {
+		.container {
+			padding: 2rem 1rem;
+			& > div {
+				&:first-of-type {
+					h1 {
+						width: 100%;
+						font-size: 43px;
+					}
+					p {
+						padding: 10px 41px 27px 0px;
+					}
+				}
+			}
+		}
+	}
+}
+@include breakpoints("mobile") {
+	header {
+		.container {
+			padding: 2rem 1.5rem;
+			flex-direction: column-reverse;
+
+			& > div {
+				&:first-of-type {
+					text-align: center;
+
+					h1 {
+						width: 100%;
+						font-size: 40px;
+					}
+					p {
+						padding: 0;
+						text-align: center;
+						margin: -8px 0 40px;
+						font-weight: lighter;
+						line-height: 2;
+					}
+				}
+			}
+		}
+	}
+}

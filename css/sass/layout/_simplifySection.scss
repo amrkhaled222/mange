@@ -1,0 +1,66 @@
+@use "../abstract" as *;
+@use "../base" as *;
+@use "../components" as *;
+
+.Simplify_Section {
+	margin-top: 119px;
+	position: relative;
+	background: $orangeColor;
+	.container {
+		padding: 2rem 9rem;
+		max-width: 1440px;
+		margin: auto;
+		position: relative;
+		div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			h2 {
+				font-size: 40px;
+				font-weight: bold;
+				width: 500px;
+				color: white;
+			}
+			button {
+				background-color: white;
+				color: $orangeColor;
+
+				&:hover {
+					color: rgb(243 97 60 / 60%);
+					background-color: white;
+				}
+			}
+		}
+	}
+}
+
+@include breakpoints("Large") {
+	.Simplify_Section {
+		.container {
+			padding: 2rem 3rem !important;
+		}
+	}
+}
+@include breakpoints("med") {
+	.Simplify_Section {
+		.container {
+			padding: 2rem 1rem !important;
+		}
+	}
+}
+@include breakpoints("mobile") {
+	.Simplify_Section {
+		margin-top: 60px;
+		.container {
+			padding: 4rem 1.5rem 5rem;
+			div {
+				flex-direction: column;
+				text-align: center;
+				h2 {
+					width: fit-content;
+					letter-spacing: -1px;
+				}
+			}
+		}
+	}
+}
