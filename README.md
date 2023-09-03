@@ -28,7 +28,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./desktopDesign.png)
-![](./mobileDesign.png)
+![](./mobileDesign)
 
 ### Links
 
