@@ -347,7 +347,7 @@ template {
   margin: 0;
 }
 
-nav .container span {
+.Simplify_Section, nav .container span {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -408,15 +408,36 @@ nav .container .burgerIcon {
 nav .container .xIcon {
   background-image: url(../images/icon-close.svg);
 }
+nav .container .imgcontainer {
+  position: absolute;
+  width: 100%;
+  height: 2000px;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+nav .container .imgcontainer img {
+  position: absolute;
+  top: 40%;
+  right: -8%;
+}
 
 @media (min-width: 993px) and (max-width: 1200px) {
   nav .container {
     padding: 2rem 3rem;
   }
+  nav .container .imgcontainer img {
+    top: 37%;
+    right: -23%;
+  }
 }
 @media (min-width: 784px) and (max-width: 992px) {
   nav .container {
     padding: 2rem 1rem;
+  }
+  nav .container .imgcontainer img {
+    top: 33%;
+    right: -41%;
   }
 }
 @media (max-width: 784px) {
@@ -458,6 +479,14 @@ nav .container .xIcon {
     display: none;
     z-index: 3;
   }
+  nav .container .imgcontainer img {
+    right: 0;
+    top: 0;
+    width: 349px;
+    height: 542px;
+    -webkit-transform: translate(15%, 150%) rotate(10deg);
+            transform: translate(15%, 150%) rotate(10deg);
+  }
 }
 .overlay {
   display: none;
@@ -473,6 +502,7 @@ header {
 }
 header .container {
   padding: 4rem 7rem 2rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,6 +635,21 @@ header .container > div:last-of-type img {
   padding: 0px 8rem 0px 0px;
   line-height: 173%;
 }
+.aboutMangeSection .container .imgcontainer {
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.aboutMangeSection .container .imgcontainer img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(-58%, 18%);
+          transform: translate(-58%, 18%);
+}
 
 @media (min-width: 993px) and (max-width: 1200px) {
   .aboutMangeSection .container {
@@ -633,6 +678,10 @@ header .container > div:last-of-type img {
   .aboutMangeSection .container > div:last-of-type p {
     padding: 0 4rem 0 0;
   }
+  .aboutMangeSection .container .imgcontainer img {
+    -webkit-transform: translate(-68%, 20%);
+            transform: translate(-68%, 20%);
+  }
 }
 @media (max-width: 784px) {
   .aboutMangeSection .container {
@@ -641,12 +690,13 @@ header .container > div:last-of-type img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: relative;
   }
   .aboutMangeSection .container > div:first-of-type h2 {
     margin: auto;
     font-size: 30px;
     text-align: center;
-    width: 100%;
+    width: 99%;
   }
   .aboutMangeSection .container > div:first-of-type p {
     padding: 0;
@@ -672,6 +722,19 @@ header .container > div:last-of-type img {
   .aboutMangeSection .container > div:last-of-type p {
     padding: 0 0 2rem 0;
     font-size: 14px;
+  }
+  .aboutMangeSection .container .imgcontainer {
+    position: absolute;
+    top: -300px;
+  }
+  .aboutMangeSection .container .imgcontainer img {
+    left: unset;
+    right: 0;
+    top: 0;
+    width: 318px;
+    height: 370px;
+    -webkit-transform: translate(60%, -13px);
+            transform: translate(60%, -13px);
   }
 }
 .sliderSection .container {
@@ -788,7 +851,8 @@ header .container > div:last-of-type img {
 .Simplify_Section {
   margin-top: 119px;
   position: relative;
-  background: #f3603c;
+  background-color: #f3603c;
+  background-image: url("../images/bg-simplify-section-desktop.svg");
 }
 .Simplify_Section .container {
   padding: 2rem 9rem;
@@ -835,6 +899,8 @@ header .container > div:last-of-type img {
 @media (max-width: 784px) {
   .Simplify_Section {
     margin-top: 60px;
+    background-image: url("../images/bg-simplify-section-mobile.svg");
+    background-position: left;
   }
   .Simplify_Section .container {
     padding: 4rem 1.5rem 5rem;
