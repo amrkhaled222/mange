@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-web-landing-page-cP5CrF4Lhn)
 - Live Site URL: [(https://amrkhaled222.github.io/mange/)]
 
 ### Built with
