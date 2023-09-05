@@ -649,8 +649,9 @@ header .container > div:last-of-type img {
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-transform: translate(-58%, 18%);
-          transform: translate(-58%, 18%);
+  -webkit-transform: translate(-71%, 34%);
+        transform: translate(-71%, 34%);
+
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
