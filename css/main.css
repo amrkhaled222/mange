@@ -364,7 +364,7 @@ nav .container {
   padding: 3rem 7rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
-  pposition: relative;
+  position: relative;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
